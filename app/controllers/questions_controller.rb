@@ -11,6 +11,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new questions_params
     if @question.save
+      flash[:success] = "Question create"
       redirect_to questions_path
     else
       render :new
@@ -24,6 +25,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find_by id: params[:id]
     if @question.update questions_params
+      flash[:success] = "Question update"
       redirect_to questions_path
     else
       render :new
@@ -33,6 +35,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question = Question.find_by id: params[:id]
     @question.destroy
+    flash[:success] = "Question destroy"
     redirect_to questions_path
   end
 

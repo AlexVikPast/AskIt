@@ -33,3 +33,7 @@ Things you may want to cover:
 #### q = Question.new
 #### q = Question.new title: "My first question", body: "sample"
 #### q.save
+
+## 4 урок.
+### yarn add bootstrap
+### yarn upgrade
