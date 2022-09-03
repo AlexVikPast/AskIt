@@ -7,4 +7,14 @@
   <time datatime="<%= question.formatted_created_at %>">
     <%= question.formatted_created_at %>
   </time>
+
+  <p>
+    <%= question.body %>
+    <br>
+    <%= link_to 'Edit', edit_question_path(question) %>
+    <%= link_to 'Destroy', question_path(question), data: { method: :delete, confirm: 'Are you sure' } %>
+    <%= link_to 'Show', question_path(question) %>
+
+  </p>
+
 <% end %>
