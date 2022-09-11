@@ -37,3 +37,9 @@ Things you may want to cover:
 ## 4 урок.
 ### yarn add bootstrap
 ### yarn upgrade
+
+## 5 урок.
+### rails g model Answer body:text question:belongs_to
+### q = Question.first
+### a = q.answers.build body: "My"
+### http://127.0.0.1:3000/rails/info/routes - просмотр всех роутингов
