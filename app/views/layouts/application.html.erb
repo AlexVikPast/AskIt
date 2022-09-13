@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AskIt</title>
+    <title><%= full_title(yield(:page_title)) %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -12,16 +12,8 @@
   </head>
 
   <body>
-    <header class="p-3 bg-dark text-white">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><%= link_to 'Home', root_path, class: 'nav-link px-2 text-white' %></li>
-            <li><%= link_to 'Questions', questions_path, class: 'nav-link px-2 text-white' %></li>
-          </ul>
-        </div>
-      </div>
-    </header>
+
+    <%= yield :main_menu %>
 
     <main class="cointainer mt-3">
       <% flash.each do |k, v| %>
