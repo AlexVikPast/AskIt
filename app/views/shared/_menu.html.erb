@@ -7,6 +7,17 @@
           <li><%= nav_tab 'Home', root_path, class: 'nav-link px-2', current_page: current_page %></li>
           <li><%= nav_tab 'Questions', questions_path, class: 'nav-link px-2', current_page: current_page %></li>
         </ul>
+        <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+          <% if user_signed_in? %>
+            <li>
+              <a class="nav-link px-2" href="#">
+                <%= current_user.name %>
+              </a>
+            </li>
+          <% else %>
+            <li><%= nav_tab 'Sign up', new_user_path, class: 'nav-link px-2', current_page: current_page %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </header>

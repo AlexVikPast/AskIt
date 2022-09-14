@@ -43,3 +43,9 @@ Things you may want to cover:
 ### q = Question.first
 ### a = q.answers.build body: "My"
 ### http://127.0.0.1:3000/rails/info/routes - просмотр всех роутингов
+
+## 8 урок.
+### rails c
+### u = User.new email: "mail@mail.ru", password: "123", password_confirmation: "123"
+### u.save
+### u.authenticate "123" ---> User. Пускает в систему если пароль верен
