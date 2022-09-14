@@ -1,9 +1,7 @@
 module ApplicationHelper
 
   def nav_tab(title, url, options = {})
-
-    Print.ppp options
-
+    
     currunt_page = options.delete :current_page
     css_class = currunt_page == title ? 'text-secondary' : 'text-white'
     options[:class] = if options[:class]
