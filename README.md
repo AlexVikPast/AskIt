@@ -49,3 +49,6 @@ Things you may want to cover:
 ### u = User.new email: "mail@mail.ru", password: "123", password_confirmation: "123"
 ### u.save
 ### u.authenticate "123" ---> User. Пускает в систему если пароль верен
+
+## 9 урок.
+### rails g migration add_missing_null_checks
