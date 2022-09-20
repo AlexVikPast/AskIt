@@ -18253,3 +18253,251 @@ Processing by UsersController#update as HTML
 Completed 200 OK in 548ms (Views: 12.4ms | ActiveRecord: 0.9ms | Allocations: 15970)
 
 
+Started GET "/users/2" for 127.0.0.1 at 2022-09-20 20:03:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/2"):
+  
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:04:08 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 5ms (Allocations: 1044)
+
+
+  
+SyntaxError (/Users/alex/RubymineProjects/AskIt/app/models/user.rb:34: syntax error, unexpected '\n', expecting =>):
+  
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:08:29 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (Allocations: 905)
+
+
+  
+Zeitwerk::NameError (expected file /Users/alex/RubymineProjects/AskIt/app/models/user.rb to define constant User, but didn't):
+  
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:11:33 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1042)
+
+
+  
+SyntaxError (/Users/alex/RubymineProjects/AskIt/app/models/user.rb:34: syntax error, unexpected '\n', expecting =>):
+  
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/models/user.rb:34: syntax error, unexpected '\n', expecting =>
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:18:25 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1560)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:21:01 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1589)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:22:33 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1613)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:22:35 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1267)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:23:14 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1396)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:25:01 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1613)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:26:07 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 4ms (Allocations: 1613)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:11:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:26:52 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 20ms (Allocations: 1113)
+
+
+  
+LoadError (cannot load such file -- validators/email_validator.rb):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:27:03 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1030)
+
+
+  
+LoadError (cannot load such file -- validators/email_validator.rb):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:27:56 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1615)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:13:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:28:40 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1579)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:13:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:29:10 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1578)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:29:11 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 11ms (Allocations: 3470)
+
+
+  
+ArgumentError (Unknown validator: 'ValidEmail2::EmailValidator'):
+  
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/concerns/authentication.rb:8:in `current_user'
+app/controllers/concerns/authentication.rb:12:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:30:in `require_no_authentication'
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:30:19 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `set_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 313)
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 1714)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 9449)
+Completed 200 OK in 22ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 15121)
+
+

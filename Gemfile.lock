@@ -257,7 +257,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
-  valid_email2
+  valid_email2 (~> 4.0)
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)

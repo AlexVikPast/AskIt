@@ -1,16 +1,16 @@
 class User < ApplicationRecord
 
-  attr_accessor :old_password 
-
+  attr_accessor :old_password
+  
   has_secure_password validations: false
 
   validate :password_presence
-  validates :password, confirmation: true, allow_blank: true, 
-    length: { minimum: 8, maximum: 70 }
-
-  validates :email, presence: true, 'valid_email_2/email': true, uniqueness: true
+  validate :correct_old_password, on: :update, if: -> { password.present? }
+  validates :password, confirmation: true, allow_blank: true,
+    length: {minimum: 8, maximum: 70}
+  
+  validates :email, presence: true
   validate :password_complexity
-  validate :correct_old_password, on: :update, if -> { password.present? }
 
   private
 
@@ -30,5 +30,4 @@ class User < ApplicationRecord
   def password_presence
     errors.add(:password, :blank) unless password_digest.present?
   end
-
 end
