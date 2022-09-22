@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
   before_action :set_question!, only: %i[show destroy edit update]
   def index
@@ -11,19 +13,18 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new questions_params
     if @question.save
-      flash[:success] = "Question create"
+      flash[:success] = 'Question create'
       redirect_to questions_path
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @question.update questions_params
-      flash[:success] = "Question update"
+      flash[:success] = 'Question update'
       redirect_to questions_path
     else
       render :new
@@ -32,7 +33,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    flash[:success] = "Question destroy"
+    flash[:success] = 'Question destroy'
     redirect_to questions_path
   end
 
@@ -42,6 +43,7 @@ class QuestionsController < ApplicationController
   end
 
   private
+
   def questions_params
     params.require(:question).permit(:title, :body)
   end

@@ -18501,3 +18501,1498 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 22ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 15121)
 
 
+Started GET "/users/2/edit" for 127.0.0.1 at 2022-09-20 20:54:44 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `set_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 1.3ms | Allocations: 296)
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered users/_form.html.erb (Duration: 4.5ms | Allocations: 1704)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 9282)
+Completed 200 OK in 40ms (Views: 23.9ms | ActiveRecord: 1.5ms | Allocations: 11427)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-20 20:54:46 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 3.1ms | Allocations: 1003)
+  Rendered pages/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 8400)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.1ms | Allocations: 9382)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-09-20 20:54:47 +0300
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 2.5ms | Allocations: 999)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:8
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:10
+  Rendered questions/index.html.erb within layouts/application (Duration: 52.5ms | Allocations: 20220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 27390)
+Completed 200 OK in 75ms (Views: 59.7ms | ActiveRecord: 1.5ms | Allocations: 30223)
+
+
+Started POST "/graphql" for 127.0.0.1 at 2022-09-21 12:33:34 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/graphql"):
+  
+Started POST "/graphql" for 127.0.0.1 at 2022-09-21 12:34:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/graphql"):
+  
+Started POST "/graphql" for 127.0.0.1 at 2022-09-21 12:34:47 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/graphql"):
+  
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:21:40 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 10.9ms | Allocations: 6169)
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 7465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 23448)
+Completed 200 OK in 58ms (Views: 46.9ms | ActiveRecord: 0.6ms | Allocations: 26853)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2022-09-22 20:21:47 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:8:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 981)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:21:47 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 7519)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 7924)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:21:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 127.1ms | Allocations: 350230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 131.5ms | Allocations: 357442)
+Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.0ms | Allocations: 358429)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 20:21:54 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/session/new
+Completed 302 Found in 253ms (ActiveRecord: 0.3ms | Allocations: 1037)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:21:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 2529)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 9781)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 10190)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:26:44 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 548)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 7151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 14629)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 15829)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:05 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 3532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 10582)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 10985)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 10643)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 11039)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 10608)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 11004)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 10566)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 10962)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 10552)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 10948)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:14 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 548)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 4248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 11550)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 12743)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 10564)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 10961)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 10552)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 10948)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:27:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 10552)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 10948)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:38:16 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (Allocations: 350)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:16 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 550)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 8295)
+Completed 200 OK in 10ms (Views: 9.0ms | Allocations: 9504)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:38:19 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 270)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:19 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 7516)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 7931)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 20:38:20 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 365)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:20 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 7503)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 7916)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:37 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 7462)
+Completed 200 OK in 7ms (Views: 7.0ms | Allocations: 7857)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:38 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 7462)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 7857)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:39 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 7462)
+Completed 200 OK in 5ms (Views: 5.2ms | Allocations: 7857)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:38:45 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 353)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:45 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 7574)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 8104)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 20:38:45 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 365)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:45 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 7503)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 7916)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:38:50 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 263)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:38:50 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 7504)
+Completed 200 OK in 7ms (Views: 7.0ms | Allocations: 7907)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:38:53 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 263)
+
+
+Started GET "/session/" for 127.0.0.1 at 2022-09-22 20:38:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:00 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 251)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 7675)
+Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 8153)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:39:26 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 278)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:26 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 7504)
+Completed 200 OK in 8ms (Views: 8.0ms | Allocations: 7908)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-09-22 20:39:27 +0300
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:8
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:10
+  Rendered questions/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 19617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 26713)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.8ms | Allocations: 30398)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 20:39:29 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:29 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 7519)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 7934)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:39:30 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:30 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 7504)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 7917)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:48 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.8ms | Allocations: 1338)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 18652)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 21883)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:39:50 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 371)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:50 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 7520)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 7939)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 20:39:50 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:50 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 7506)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 7922)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 20:39:52 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:52 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 7504)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 7917)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 20:39:53 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 20:39:53 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 224)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 7922)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRememberTokenDigestToUsers (20220922174112)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_token_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220922174112"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:19 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 7622)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 8137)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:04:21 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:21 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 7505)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 7920)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:04:21 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:21 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 7509)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 7925)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:04:22 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:22 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 7505)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 7918)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:04:23 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:23 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 7919)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:04:36 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 264)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:36 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7506)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 7909)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:04:36 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 7464)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 7859)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:05:20 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 1655)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:05:20 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 589)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 17024)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 18975)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:06:08 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 238)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 7446)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 7962)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:06:13 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 126.1ms | Allocations: 351412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 138.9ms | Allocations: 358622)
+Completed 200 OK in 141ms (Views: 140.0ms | Allocations: 359655)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:07:22 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 373)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:07:22 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 237)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 7663)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 8197)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:07:24 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 352)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:07:24 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 7509)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 7925)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:07:24 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:07:24 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 7506)
+Completed 200 OK in 26ms (Views: 25.6ms | Allocations: 7919)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:11:04 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (Allocations: 348)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:04 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 237)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 7485)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 8003)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:05 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 7464)
+Completed 200 OK in 6ms (Views: 6.0ms | Allocations: 7859)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:11:06 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 270)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:06 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.9ms | Allocations: 7919)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:15 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 238)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 7444)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 7960)
+
+
+Started GET "/questions" for 127.0.0.1 at 2022-09-22 21:11:16 +0300
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 235)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:8
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/questions/index.html.erb:10
+  Rendered questions/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 19779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 26877)
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 0.9ms | Allocations: 30800)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:11:19 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:19 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 7521)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 7936)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:11:20 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 349)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:20 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 7919)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:11:22 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:22 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7505)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 7918)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:11:22 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:22 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 7919)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-22 21:11:23 +0300
+Processing by UsersController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:23 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 7505)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 7918)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:11:23 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:11:23 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 7506)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 7919)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:12:01 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 351)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:12:01 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 237)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 7576)
+Completed 200 OK in 7ms (Views: 6.8ms | Allocations: 8107)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:12:02 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 267)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:12:02 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 7506)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 7919)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:12:04 +0300
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 0ms (Allocations: 261)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:12:04 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 7506)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 7909)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:12:19 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 238)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 3500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 10565)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 11171)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:13:40 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 238)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 3499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 10575)
+Completed 200 OK in 9ms (Views: 8.9ms | Allocations: 11177)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:13:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 10553)
+Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 10952)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:13:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 10553)
+Completed 200 OK in 13ms (Views: 12.6ms | Allocations: 10952)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:14:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 10553)
+Completed 200 OK in 11ms (Views: 10.9ms | Allocations: 10952)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:14:53 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/session/new
+Completed 302 Found in 315ms (ActiveRecord: 0.6ms | Allocations: 8252)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:14:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.1ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10595)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 11002)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:15:01 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.1ms | Allocations: 4786)
+
+
+  
+NoMethodError (undefined method `remember_token=' for #<User:0x00000001340966d8>
+Did you mean?  remember_token_digest=):
+  
+app/models/user.rb:16:in `remember_me'
+app/controllers/concerns/authentication.rb:28:in `remember'
+app/controllers/sessions_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:18:20 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.3ms | Allocations: 8898)
+
+
+  
+NoMethodError (undefined method `remember_token=' for #<User:0x0000000133fefb30>
+Did you mean?  remember_token_digest=):
+  
+app/models/user.rb:16:in `remember_me'
+app/controllers/concerns/authentication.rb:28:in `remember'
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:18:50 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.5ms | Allocations: 9323)
+
+
+  
+NoMethodError (undefined method `remember_token=' for #<User:0x000000013439aac8>
+Did you mean?  remember_token_digest=):
+  
+app/models/user.rb:16:in `remember_me'
+app/controllers/concerns/authentication.rb:28:in `remember'
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:21:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", "$2a$12$mi1l1fYPWnAWSshuebYkA.LLAumFocfQhl/2oSFlm1rhqCoqO0iWi"], ["id", 2]]
+  ↳ app/models/user.rb:19:in `remember_me'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 546ms (ActiveRecord: 1.5ms | Allocations: 7373)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:21:21 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.7ms | Allocations: 1657)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 10725)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 11495)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:22:20 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 8.8ms | Allocations: 5970)
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 6167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 13354)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.7ms | Allocations: 13871)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2022-09-22 21:22:24 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", nil], ["id", 4]]
+  ↳ app/models/user.rb:22:in `forget_me'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1480)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:22:24 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 229)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 7509)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 7913)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:22:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 235)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 10619)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 11133)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:22:37 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.ru", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/session/new
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 977)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:22:37 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 10595)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 11003)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:22:48 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.ru", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/session/new
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 827)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:22:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 10595)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 11002)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:23:29 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.9ms | Allocations: 993)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 8328)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.1ms | Allocations: 8725)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2022-09-22 21:23:31 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", nil], ["id", 2]]
+  ↳ app/models/user.rb:22:in `forget_me'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 1405)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:23:31 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 7505)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 7908)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:23:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 10553)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 10955)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:23:44 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 254ms (ActiveRecord: 0.3ms | Allocations: 1424)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:23:45 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 992)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 8362)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 8766)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:23:54 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.8ms | Allocations: 1004)
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 8332)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 8728)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:24:41 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 76.4ms | Allocations: 6420)
+  Rendered pages/index.html.erb within layouts/application (Duration: 88.4ms | Allocations: 9507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 245.2ms | Allocations: 25378)
+Completed 200 OK in 265ms (Views: 257.9ms | ActiveRecord: 0.7ms | Allocations: 28115)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:24:47 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 2.3ms | Allocations: 1017)
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 8348)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms | Allocations: 8751)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:25:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", "$2a$12$KxKH0fSfDbfYopnldfBn0eSgzvk99dmaytXFvAAC9kzvW.BCjijke"], ["id", 2]]
+  ↳ app/models/user.rb:18:in `remember_me'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 514ms (ActiveRecord: 2.1ms | Allocations: 2581)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:25:21 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 993)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 8370)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 8775)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2022-09-22 21:26:12 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", nil], ["id", 2]]
+  ↳ app/models/user.rb:22:in `forget_me'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 1421)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:26:12 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 229)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 7511)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7914)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 21:26:14 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 174.8ms | Allocations: 353999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 180.2ms | Allocations: 361214)
+Completed 200 OK in 183ms (Views: 181.4ms | ActiveRecord: 0.0ms | Allocations: 362229)
+
+
+Started POST "/session" for 127.0.0.1 at 2022-09-22 21:26:21 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Sign in!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", "$2a$12$.mOnSVO9Z89y/q78C6911ephdzT3OPFv34CQTKWkENoSNB00CGdAG"], ["id", 2]]
+  ↳ app/models/user.rb:18:in `remember_me'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 514ms (ActiveRecord: 1.3ms | Allocations: 2309)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:26:22 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.0ms | Allocations: 1004)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 11789)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 12195)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:26:37 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 31.1ms | Allocations: 993)
+  Rendered pages/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 124.6ms | Allocations: 8328)
+Completed 200 OK in 196ms (Views: 140.4ms | ActiveRecord: 0.1ms | Allocations: 8724)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:26:37 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.4ms | Allocations: 993)
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 8328)
+Completed 200 OK in 119ms (Views: 109.5ms | ActiveRecord: 0.1ms | Allocations: 8724)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 21:27:09 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:9:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 15.9ms | Allocations: 6697)
+  Rendered pages/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 8218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | Allocations: 24147)
+Completed 200 OK in 66ms (Views: 54.9ms | ActiveRecord: 0.5ms | Allocations: 27836)
+
+

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :require_no_authentication, only: %i[edit update]
   before_action :require_authentication, only: %i[new create]
@@ -11,19 +13,18 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the app, #{ current_user.name_or_email }"
+      flash[:success] = "Welcome to the app, #{current_user.name_or_email}"
       redirect_to root_path
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @user.update user_params
-      flash[:success] = "Your profile was successfully updated"
+      flash[:success] = 'Your profile was successfully updated'
       redirect_to edit_user_path(@user)
     else
       render :edit

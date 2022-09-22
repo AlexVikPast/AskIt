@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Answer < ApplicationRecord
   belongs_to :question
 
@@ -6,5 +8,4 @@ class Answer < ApplicationRecord
   def formatted_created_at
     created_at.strftime('%Y-%m-%d %H:%M:%S')
   end
-
 end
