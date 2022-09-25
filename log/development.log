@@ -19996,3 +19996,187 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 66ms (Views: 54.9ms | ActiveRecord: 0.5ms | Allocations: 27836)
 
 
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:18:58 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.1ms | Allocations: 4731)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 23:18:58 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.1ms | Allocations: 997)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8516)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 9037)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 23:18:59 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 1.3ms | Allocations: 995)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 8330)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 8732)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2022-09-22 23:19:16 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_token_digest" = ? WHERE "users"."id" = ?[0m  [["remember_token_digest", nil], ["id", 2]]
+  ↳ app/models/user.rb:22:in `forget_me'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms | Allocations: 1445)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-22 23:19:16 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 213)
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7491)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 7895)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:19:24 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.4ms | Allocations: 2557)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2950)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3014)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3974)
+
+
+  
+ActionView::Template::Error (undefined method `split' for 1:Integer):
+     8:           <li><%= nav_tab 'Questions', questions_path, class: 'nav-link px-2', current_page: current_page %></li>
+     9:         </ul>
+    10:         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+    11:           <% if user_signed_in? %>
+    12:             <li class="dropdown">
+    13:               <%= nav_tab current_user.name_or_email, '#',
+    14:                 class: 'nav-link px-2 dropdown-toggle',
+  
+app/controllers/concerns/authentication.rb:12:in `current_user'
+app/controllers/concerns/authentication.rb:22:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:62:in `user_signed_in?'
+app/views/shared/_menu.html.erb:11
+app/views/shared/_menu.html.erb:2
+app/helpers/application_helper.rb:17:in `currently_at'
+app/views/sessions/new.html.erb:2
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:19:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 1.4ms | Allocations: 2299)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2402)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2466)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2931)
+
+
+  
+ActionView::Template::Error (undefined method `split' for 1:Integer):
+     8:           <li><%= nav_tab 'Questions', questions_path, class: 'nav-link px-2', current_page: current_page %></li>
+     9:         </ul>
+    10:         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+    11:           <% if user_signed_in? %>
+    12:             <li class="dropdown">
+    13:               <%= nav_tab current_user.name_or_email, '#',
+    14:                 class: 'nav-link px-2 dropdown-toggle',
+  
+app/controllers/concerns/authentication.rb:12:in `current_user'
+app/controllers/concerns/authentication.rb:22:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:62:in `user_signed_in?'
+app/views/shared/_menu.html.erb:11
+app/views/shared/_menu.html.erb:2
+app/helpers/application_helper.rb:17:in `currently_at'
+app/views/sessions/new.html.erb:2
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:20:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 1.1ms | Allocations: 2261)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2361)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 2425)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2801)
+
+
+  
+ActionView::Template::Error (undefined method `split' for 1:Integer):
+     8:           <li><%= nav_tab 'Questions', questions_path, class: 'nav-link px-2', current_page: current_page %></li>
+     9:         </ul>
+    10:         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+    11:           <% if user_signed_in? %>
+    12:             <li class="dropdown">
+    13:               <%= nav_tab current_user.name_or_email, '#',
+    14:                 class: 'nav-link px-2 dropdown-toggle',
+  
+app/controllers/concerns/authentication.rb:12:in `current_user'
+app/controllers/concerns/authentication.rb:22:in `user_signed_in?'
+app/controllers/concerns/authentication.rb:62:in `user_signed_in?'
+app/views/shared/_menu.html.erb:11
+app/views/shared/_menu.html.erb:2
+app/helpers/application_helper.rb:17:in `currently_at'
+app/views/sessions/new.html.erb:2
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:20:58 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 2.0ms | Allocations: 222)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 159.7ms | Allocations: 354453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.4ms | Allocations: 361785)
+Completed 200 OK in 168ms (Views: 167.0ms | Allocations: 362399)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:21:12 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 3482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 10515)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 11118)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:21:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 222)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 3482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10515)
+Completed 200 OK in 8ms (Views: 7.9ms | Allocations: 11123)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-09-22 23:21:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 222)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 3482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 10518)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 11139)
+
+
