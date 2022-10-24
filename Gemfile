@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'draper'
 gem 'kaminari', '~> 1.2'
 gem 'valid_email2', '~> 4.0'
+gem 'rubyzip', '~> 2'
+gem 'caxlsx', '~> 3.1'
+gem 'caxlsx_rails', '~> 0.6'

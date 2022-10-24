@@ -21042,3 +21042,559 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 8752)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-23 23:52:06 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 14.1ms | Allocations: 6897)
+  Rendered pages/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 8197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 24176)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.8ms | Allocations: 27624)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2022-10-23 23:54:16 +0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/alex/.rvm/gems/ruby-2.7.5/gems/railties-6.1.6.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/alex/.rvm/gems/ruby-2.7.5/gems/railties-6.1.6.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/alex/.rvm/gems/ruby-2.7.5/gems/actionpack-6.1.6.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (Duration: 3.7ms | Allocations: 5613)
+  Rendered /Users/alex/.rvm/gems/ruby-2.7.5/gems/actionpack-6.1.6.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 11.8ms | Allocations: 998)
+  Rendered /Users/alex/.rvm/gems/ruby-2.7.5/gems/railties-6.1.6.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 21.5ms | Allocations: 11553)
+  Rendered layout /Users/alex/.rvm/gems/ruby-2.7.5/gems/railties-6.1.6.1/lib/rails/templates/layouts/application.html.erb (Duration: 24.9ms | Allocations: 11776)
+Completed 200 OK in 32ms (Views: 26.0ms | Allocations: 12993)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:02:10 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 7.5ms | Allocations: 4294)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 12286)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 1.0ms | Allocations: 15578)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:05:03 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.2ms | Allocations: 1301)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 6939)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 7003)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.5ms | Allocations: 8218)
+
+
+  
+ActionView::Template::Error (Missing partial admin/users/_user with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alex/RubymineProjects/AskIt/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/kaminari-core-1.2.2/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actiontext-6.1.6.1/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actionmailbox-6.1.6.1/app/views"
+):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render @users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:05:57 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.7ms | Allocations: 1300)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 9196)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.3ms | Allocations: 10434)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:06:09 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.3ms | Allocations: 1308)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 9041)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.2ms | Allocations: 10278)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:06:31 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 6.5ms | Allocations: 1309)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 3748)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3813)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms | Allocations: 5030)
+
+
+  
+ActionView::Template::Error (Missing partial admin/users/_user with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alex/RubymineProjects/AskIt/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/kaminari-core-1.2.2/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actiontext-6.1.6.1/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actionmailbox-6.1.6.1/app/views"
+):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render @users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:09:26 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 7.9ms | Allocations: 1300)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 15.8ms | Allocations: 3845)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 29.3ms | Allocations: 6378)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 6442)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.9ms | Allocations: 7651)
+
+
+  
+ActionView::Template::Error (undefined method `create_at' for #<User:0x000000013ea35fe0>
+Did you mean?  created_at
+               created_at?
+               created_at=):
+    2:   <th scope="row"><%= user.id %></th>
+    3:   <th scope="row"><%= user.name %></th>
+    4:   <th scope="row"><%= user.email %></th>
+    5:   <th scope="row"><%= user.create_at %></th>
+    6:   <th scope="row"><%= user.update_at %></th>
+    7: </tr>
+  
+app/views/admin/users/_user.html.erb:5
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:09:53 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 8.3ms | Allocations: 1300)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.9ms | Allocations: 215)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 10239)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.6ms | Allocations: 11476)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:10:46 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 4.3ms | Allocations: 987)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.4ms | Allocations: 67)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 9040)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.4ms | Allocations: 9476)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:11:18 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 6.7ms | Allocations: 1309)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3749)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3814)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 5031)
+
+
+  
+ActionView::Template::Error (Missing partial admin/users/_user with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alex/RubymineProjects/AskIt/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/kaminari-core-1.2.2/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actiontext-6.1.6.1/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actionmailbox-6.1.6.1/app/views"
+):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render @users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:11:26 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.0ms | Allocations: 1300)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.7ms | Allocations: 213)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 2744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 10235)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms | Allocations: 11472)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:12:13 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 8.0ms | Allocations: 3860)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5026)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5090)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms | Allocations: 7484)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render @users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:12:20 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 4.2ms | Allocations: 1300)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 1.1ms | Allocations: 216)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 2793)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 10284)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.4ms | Allocations: 11522)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:12:33 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 6.7ms | Allocations: 4174)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.7ms | Allocations: 216)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 5662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 13023)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 1.1ms | Allocations: 16129)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:13:29 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.6ms | Allocations: 1301)
+  Rendered admin/users/_user.html.erb (Duration: 11.1ms | Allocations: 4593)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 6425)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6489)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms | Allocations: 7692)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000011170>
+Did you mean?  @users):
+    1: <tr>
+    2:   <th scope="row"><%= user.id %></th>
+    3:   <th scope="row"><%= user.name %></th>
+    4:   <th scope="row"><%= user.email %></th>
+    5:   <th scope="row"><%= user.created_at %></th>
+  
+app/views/admin/users/_user.html.erb:2
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:13:37 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.4ms | Allocations: 1300)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ ORDER BY "users"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 5594)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5658)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 6867)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<User::ActiveRecord_Relation:0x000000013e9df820>):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render 'user', @users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:16:23 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1199)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2409)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide :page_title, 'Admin Users' %>
+<% currently_at 'Users' %>
+
+<h1 class="mb-4">Admin Users</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render 'user', locals: {user: @users} @users %>
+  </tbody>
+</table>
+):
+1:    <% provide :page_title, 'Admin Users' %>
+2:    <% currently_at 'Users' %>
+3:    
+4:    <h1 class="mb-4">Admin Users</h1>
+5:    
+6:    <table class="table table-striped table-hover">
+7:      <thead>
+8:        <tr>
+9:          <th scope="col">#</th>
+10:          <th scope="col">Name</th>
+11:          <th scope="col">Email</th>
+12:          <th scope="col">Created at</th>
+13:          <th scope="col">Updated at</th>
+14:        </tr>
+15:      </thead>
+16:      <tbody>
+17:        <%= render 'user', locals: {user: @users} @users %>
+18:      </tbody>
+19:    </table>
+  
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected instance variable, expecting ')'
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:16:45 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 6.4ms | Allocations: 1300)
+  Rendered admin/users/_user.html.erb (Duration: 11.0ms | Allocations: 4600)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6434)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 6498)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms | Allocations: 7707)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000011fa8>
+Did you mean?  @users):
+    1: <tr>
+    2:   <th scope="row"><%= user.id %></th>
+    3:   <th scope="row"><%= user.name %></th>
+    4:   <th scope="row"><%= user.email %></th>
+    5:   <th scope="row"><%= user.created_at %></th>
+  
+app/views/admin/users/_user.html.erb:2
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:16:58 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1199)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2409)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide :page_title, 'Admin Users' %>
+<% currently_at 'Users' %>
+
+<h1 class="mb-4">Admin Users</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render 'user', locals: { user: @users[0]] } %>
+  </tbody>
+</table>
+):
+1:    <% provide :page_title, 'Admin Users' %>
+2:    <% currently_at 'Users' %>
+3:    
+4:    <h1 class="mb-4">Admin Users</h1>
+5:    
+6:    <table class="table table-striped table-hover">
+7:      <thead>
+8:        <tr>
+9:          <th scope="col">#</th>
+10:          <th scope="col">Name</th>
+11:          <th scope="col">Email</th>
+12:          <th scope="col">Created at</th>
+13:          <th scope="col">Updated at</th>
+14:        </tr>
+15:      </thead>
+16:      <tbody>
+17:        <%= render 'user', locals: { user: @users[0]] } %>
+18:      </tbody>
+19:    </table>
+  
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/admin/users/index.html.erb:17: syntax error, unexpected ']', expecting '}'
+app/views/admin/users/index.html.erb:21: syntax error, unexpected `end', expecting ')'
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:17:24 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.0ms | Allocations: 1300)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 5915)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 5979)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 7188)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x000000000128e0>
+Did you mean?  @users):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render users %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:17:31 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.0ms | Allocations: 1300)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5931)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5995)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 7204)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000012d40>
+Did you mean?  @users):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <%= render user %>
+    18:   </tbody>
+    19: </table>
+  
+app/views/admin/users/index.html.erb:17
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:17:45 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 12.8ms | Allocations: 1300)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 1.0ms | Allocations: 213)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 10235)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.2ms | Allocations: 11472)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 00:20:46 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 11.7ms | Allocations: 1301)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 1.3ms | Allocations: 213)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 10332)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.6ms | Allocations: 11570)
+
+

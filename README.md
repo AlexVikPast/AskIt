@@ -52,3 +52,6 @@ Things you may want to cover:
 
 ## 9 урок.
 ### rails g migration add_missing_null_checks
+
+## 11 урок.
+### add gem 'rubyzip'
