@@ -21598,3 +21598,355 @@ Processing by Admin::UsersController#index as HTML
 Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.6ms | Allocations: 11570)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-24 20:28:57 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 11.7ms | Allocations: 6585)
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 7182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 23108)
+Completed 200 OK in 70ms (Views: 53.8ms | ActiveRecord: 0.8ms | Allocations: 26817)
+
+
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 20:28:59 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 20:29:00 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 20:29:08 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 3.2ms | Allocations: 994)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 1.3ms | Allocations: 224)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 9781)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.4ms | Allocations: 10917)
+
+
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:29:24 +0300
+Processing by Admin::UsersController#index as ZIP
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+  
+NameError (uninitialized constant Zip::OutputStrea
+Did you mean?  Zip::OutputStream):
+  
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:29:54 +0300
+Processing by Admin::UsersController#index as ZIP
+Completed 500 Internal Server Error in 5ms (Allocations: 3187)
+
+
+  
+NameError (uninitialized constant Zip::OutputStrea
+Did you mean?  Zip::OutputStream):
+  
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:30:03 +0300
+Processing by Admin::UsersController#index as ZIP
+Completed 500 Internal Server Error in 8ms (Allocations: 3111)
+
+
+  
+NameError (uninitialized constant Zip::OutputStrea
+Did you mean?  Zip::OutputStream):
+  
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:30:53 +0300
+Processing by Admin::UsersController#index as ZIP
+Completed 500 Internal Server Error in 5ms (Allocations: 3138)
+
+
+  
+NameError (uninitialized constant Zip::OutputStrem
+Did you mean?  Zip::OutputStream):
+  
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:31:02 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 6762)
+
+
+  
+ActionView::MissingTemplate (Missing template admin/users/user with {:locale=>[:en], :formats=>[:xlsx], :variants=>[], :handlers=>[:asxlsx]}. Searched in:
+  * "/Users/alex/RubymineProjects/AskIt/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/kaminari-core-1.2.2/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actiontext-6.1.6.1/app/views"
+  * "/Users/alex/.rvm/gems/ruby-2.7.5/gems/actionmailbox-6.1.6.1/app/views"
+):
+  
+app/controllers/admin/users_controller.rb:21:in `block (2 levels) in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 20:31:15 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 20:31:15 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:31:39 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  Rendering admin/users/user.xlsx.axlsx
+  Rendered admin/users/user.xlsx.axlsx (Duration: 29.4ms | Allocations: 1580)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.7ms | Allocations: 7412)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    1: wb = xlsx_package.workbook
+    2: 
+    3: wb.add_worksheet(name: "User") do |sheet|
+    4:   sheet.add_row["ID", user.id]
+    5:   sheet.add_row["Name", user.name]
+    6:   sheet.add_row["Email", user.email]
+    7:   sheet.add_row["Created at", user.created_at]
+  
+(eval):3:in `[]'
+(eval):3:in `[]'
+app/views/admin/users/user.xlsx.axlsx:4
+app/views/admin/users/user.xlsx.axlsx:3
+app/controllers/admin/users_controller.rb:21:in `block (2 levels) in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 20:32:01 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 20:32:01 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:33:15 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  Rendering admin/users/user.xlsx.axlsx
+  Rendered admin/users/user.xlsx.axlsx (Duration: 14.2ms | Allocations: 4348)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms | Allocations: 5695)
+
+
+  
+ActionView::Template::Error (undefined method `update_at' for #<User:0x0000000123186d60>
+Did you mean?  updated_at
+               updated_at=
+               updated_at?
+               update
+               update!):
+    5:   sheet.add_row ["Name", user.name]
+    6:   sheet.add_row ["Email", user.email]
+    7:   sheet.add_row ["Created at", user.created_at]
+    8:   sheet.add_row ["Update at", user.update_at]
+    9: end
+  
+app/views/admin/users/user.xlsx.axlsx:8
+app/views/admin/users/user.xlsx.axlsx:3
+app/controllers/admin/users_controller.rb:21:in `block (2 levels) in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:18:in `respond_with_zipped_users'
+app/controllers/admin/users_controller.rb:11:in `block (2 levels) in index'
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:33:22 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  Rendering admin/users/user.xlsx.axlsx
+  Rendered admin/users/user.xlsx.axlsx (Duration: 16.9ms | Allocations: 5769)
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data users.zip (193.6ms)
+Completed 200 OK in 217ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 357179)
+
+
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:33:52 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  Rendering admin/users/user.xlsx.axlsx
+  Rendered admin/users/user.xlsx.axlsx (Duration: 11.8ms | Allocations: 5610)
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data users.zip (0.7ms)
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 6882)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 20:33:53 +0300
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 15.8ms | Allocations: 4543)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.7ms | Allocations: 216)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 6105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 13712)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms | Allocations: 14811)
+
+
+Started GET "/admin/users.zip" for 127.0.0.1 at 2022-10-24 20:33:54 +0300
+Processing by Admin::UsersController#index as ZIP
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/controllers/admin/users_controller.rb:19:in `block in respond_with_zipped_users'
+  Rendering admin/users/user.xlsx.axlsx
+  Rendered admin/users/user.xlsx.axlsx (Duration: 8.9ms | Allocations: 5608)
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data users.zip (0.8ms)
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 6863)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 21:08:01 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 7.4ms | Allocations: 5579)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.4ms | Allocations: 386)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 39.7ms | Allocations: 10134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.4ms | Allocations: 26065)
+Completed 200 OK in 89ms (Views: 80.5ms | ActiveRecord: 0.7ms | Allocations: 30529)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2022-10-24 21:08:37 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/admin/users"):
+  
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:09:08 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:09:08 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 21:12:20 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 20.3ms | Allocations: 5365)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.7ms | Allocations: 231)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 8891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 24821)
+Completed 200 OK in 86ms (Views: 70.3ms | ActiveRecord: 1.2ms | Allocations: 29265)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2022-10-24 21:12:25 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/admin/users"):
+  
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:13:00 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:13:00 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 21:13:32 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 6.1ms | Allocations: 5470)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 3.3ms | Allocations: 250)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 9818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 25738)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 0.6ms | Allocations: 30050)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2022-10-24 21:13:34 +0300
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "archive"=>#<ActionDispatch::Http::UploadedFile:0x0000000107a34ac8 @tempfile=#<Tempfile:/var/folders/91/dpkm7v7s5kdcrcxcms634z9h0000gn/T/RackMultipart20221024-58510-75pxf8.xlsx>, @original_filename="user_7.xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"archive\"; filename=\"user_7.xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">, "commit"=>"Upload!"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1997)
+
+
+  
+Zip::Error (XLSX file format error: Zip end of central directory signature not found):
+  
+app/services/user_bulk_service.rb:18:in `users_from'
+app/services/user_bulk_service.rb:11:in `block (2 levels) in call'
+app/services/user_bulk_service.rb:10:in `block in call'
+app/services/user_bulk_service.rb:9:in `call'
+app/services/application_service.rb:3:in `call'
+app/controllers/admin/users_controller.rb:18:in `create'
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:14:00 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:14:00 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Started POST "/admin/users" for 127.0.0.1 at 2022-10-24 21:14:59 +0300
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "archive"=>#<ActionDispatch::Http::UploadedFile:0x000000012cca22e0 @tempfile=#<Tempfile:/var/folders/91/dpkm7v7s5kdcrcxcms634z9h0000gn/T/RackMultipart20221024-58510-zqdckv.xlsx>, @original_filename="user_7.xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"archive\"; filename=\"user_7.xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">, "commit"=>"Upload!"}
+Redirected to http://127.0.0.1:3000/admin/users
+Completed 302 Found in 5ms (Allocations: 1400)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2022-10-24 21:14:59 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admin/users_controller.rb:7:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `current_user'
+  Rendered shared/_menu.html.erb (Duration: 5.4ms | Allocations: 3984)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered collection of admin/users/_user.html.erb [1 times] (Duration: 0.2ms | Allocations: 81)
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 6312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 13680)
+Completed 200 OK in 26ms (Views: 17.7ms | ActiveRecord: 0.9ms | Allocations: 16315)
+
+
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:16:18 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:16:18 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:35:31 +0300
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:37:56 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:37:56 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:55:08 +0300
+Started GET "/cable" for 127.0.0.1 at 2022-10-24 21:56:10 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2022-10-24 21:56:10 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "GraphqlChannel"
